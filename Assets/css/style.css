@@ -10,8 +10,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-
-
 /* homepage */
 .homepageHeader {
     background-color: var(--dark);
@@ -113,16 +111,6 @@ body {
     margin-bottom: 5px;
     font-weight: bold;
 }
-
-/* .nextBtnIncorrect {
-    background-color: var(--light);
-    border: 5px solid lightcoral;
-    border-radius: 2px;
-    padding: 5px;
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-weight: bold;
-} */
 
 /* highscore page */
 .highscorePageHeader {
