@@ -105,24 +105,24 @@ body {
     margin: 5px;
 }
 
-.nextBtnCorrect {
-    /* position: absolute; */
+.nextBtn {
     background-color: var(--light);
-    border: 5px solid lightgreen;
+    border: 5px solid var(--dark);
     border-radius: 2px;
     padding: 5px;
-    margin: 5px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
-.nextBtnIncorrect {
+/* .nextBtnIncorrect {
     background-color: var(--light);
     border: 5px solid lightcoral;
     border-radius: 2px;
     padding: 5px;
-    margin: 5px;
+    margin-top: 0;
+    margin-bottom: 5px;
     font-weight: bold;
-}
+} */
 
 /* highscore page */
 .highscorePageHeader {

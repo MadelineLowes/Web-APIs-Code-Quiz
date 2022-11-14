@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Coding Quiz</title>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="./Assets/css/style.css" />
 </head>
@@ -23,11 +23,7 @@
       <button id="restart-quiz">Restart Quiz</button>
       <ul>
         <li>Quiz Score: </li>
-        <!--  update the current score and increase as the score increases -->
         <li id="current-score">0</li>
-        <!-- countdown next to timer -->
-        <li>Timer: </li>
-        <li id="timer-countdown">60s</li>
       </ul>
     </div>
     <div id="highscore-page-header" class="highscorePageHeader hide">
@@ -53,7 +49,16 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-  </div> -->
+  </header>
+
+  <div id="homepage-buttons" class="homepageButtons">
+    <button id="start-quiz" class="startQuiz">
+      Start Quiz
+    </button>
+    <button id="highscores" class="highscores">
+      View High Scores
+    </button>
+  </div>
 
   <card id="question-card" class="qCard hide">
     <h2 id="listed-question" class="listedQuestion"></h2>
@@ -64,26 +69,18 @@
       <button id="answer-btn4" class="answerBtn"></button>
     </div>
     <div>
-      <p id="answer"></p>
+      <button id="next-btn" class="nextBtn hide">Next</button>
     </div>
-    <div">
-      <!-- do i need ID? -->
-      <button id="next-btn-correct" class="nextBtnCorrect hide">Next Question</button>
-      <button id="next-btn-incorrect" class="nextBtnIncorrect hide">Next Question</button>
-      </div>
   </card>
 
-  <!-- <highscore page>
-    <a href="./questions.html">Restart Quiz</a>
-  </header>
-  <div class="highscores">
-    <h2>Highscores</h2>
-    <ul>
-      <li id="stored-user-names">Username</li>
-      <li id="stored-scores">Score</li>
-    </ul>
-  </div> -->
-
+<card id="highscore-page-card" class="highscorePageCard hide">
+  <h2>Highscores!</h2>
+  <div id="stored-user-names" class="storedUserNames">
+    <p>stored user names</p>
+    
+  </div>
+</card>
+  
   <!-- Link to the jQuery library -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- Link to my JavaScript File  -->
