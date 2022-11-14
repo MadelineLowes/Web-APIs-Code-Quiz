@@ -2,7 +2,7 @@ function startQuiz() {
   // hide the homepage header & buttons
   $("#homepage-header").addClass("hide");
   $("#homepage-buttons").addClass("hide");
-
+ $("#restart-quiz2").addClass("hide");
   // unhide the question page header & card
   $("#question-page-header").removeClass("hide");
   $("#question-card").removeClass("hide");
@@ -45,15 +45,9 @@ function startQuiz() {
         console.log("Im RESETTING the question");
         setQuestion();
         $("#next-btn").addClass("hide");
-
-
       });
     });
-
   };
-
-
-
   setQuestion();
   console.log("im setting the question!");
 };
@@ -70,8 +64,12 @@ function viewHighScores() {
 };
 
 
-// $("#restart-quiz").click(startQuiz());
+$("#restart-quiz1").click(startQuiz);
+$("#restart-quiz2").click(startQuiz);
 $("#start-quiz").click(startQuiz);
-$("#highscores").click(viewHighScores);
+$("#highscores1").click(viewHighScores);
+$("#highscores2").click(viewHighScores);
+$("#highscores3").click(viewHighScores);
+
 
 
