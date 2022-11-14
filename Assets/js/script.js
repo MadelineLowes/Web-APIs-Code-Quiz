@@ -82,10 +82,3 @@ function viewHighScores() {
 // $("#restart-quiz").click(startQuiz());
 $("#start-quiz").click(startQuiz);
 $("#highscores").click(viewHighScores);
-
-
-
-// console.log("this is the idClicked: " + idClicked);
-// console.log("this is the type of idClicked: " + typeof idClicked);
-// console.log("this is the answer: " + answers);
-// console.log("this is the type of answer: " + typeof answers);
