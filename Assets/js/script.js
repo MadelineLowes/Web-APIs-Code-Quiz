@@ -85,16 +85,28 @@ function viewHighScores() {
 
   $("#highscore-page-header").removeClass("hide");
   $("#highscore-page-card").removeClass("hide");
-
+  console.log("this line is ok")
   if (localStorage.getItem("locallyStoredUsers") === null) {
     var users = []
+    console.log("this line is ok")
   } else {
     var users = JSON.parse(localStorage.getItem("locallyStoredUsers"))
+    console.log("this line is ok")
+  }
+  console.log("this line is ok")
+
+  if (window.chrome && chrome.app && chrome.app.runtime) {
+    // Running inside a Chrome App context
+    console.log("Running inside a Chrome App context");
+  } else {
+    // Either not Chrome, or not as an app window
+    console.log("Running outside a Chrome App context");
   }
 
   for (i = 0; i < users.length; i++) {
     let table = $("#highscore-table");
     let newRow = $("#user-pair");
+    console.log("this line is ok")
 
     function addRow(table) {
       //new row
@@ -102,16 +114,21 @@ function viewHighScores() {
         .attr("id", `user-pair${i}`) // everytime we clone, we give new id
         .removeClass("hide")
         .appendTo(table) // then append to table
+        console.log("this line is ok")
+
 
       //contents for name cell
       $(`#user-pair${i} :nth-child(1)`).attr("id", `name${i}`)
       $(`#name${i}`).html(users[i][0].name)
+      console.log("this line is ok")
 
       //contents for score cell
       $(`#user-pair${i} :nth-child(2)`).attr("id", `score${i}`)
       $(`#score${i}`).html(users[i][0].score)
+      console.log("this line is ok")
     }
     addRow(table);
+    console.log("this line is ok")
   }
 
   function checkHighScore() {
@@ -119,7 +136,7 @@ function viewHighScores() {
     for (i = 0; i < users.length; i++) {
       scoreArray.push(users[i][0].score)
     }
-
+    console.log("this line is ok")
     let highestScore = Math.max(...scoreArray);
 
     for (i = 0; i < users.length; i++) {
@@ -127,10 +144,13 @@ function viewHighScores() {
         $(`#user-pair${i}`).addClass("highestScore");
         $(`#score${i}`).addClass("highestScore");
         $(`#name${i}`).addClass("highestScore");
+        console.log("this line is ok")
       }
     }
   }
-  checkHighScore();
+  console.log("this line is ok")
+  checkHighScore;
+  console.log("this line is ok")
 }
 
 function userNameInput(currentScore) {
@@ -167,3 +187,4 @@ $("#start-quiz").click(startQuiz);
 $("#highscores-home").click(viewHighScores);
 $("#exit-quiz").click(viewHighScores);
 $("#highscores-quiz").click(viewHighScores);
+
