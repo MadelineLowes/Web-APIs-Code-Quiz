@@ -3,13 +3,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Coding Quiz</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./Assets/css/style.css" />
+  <link rel="stylesheet" href="./Assets/css/style.css">
 </head>
 
 <body>
@@ -20,9 +20,8 @@
     </div>
 
     <div id="question-page-header" class="qPageHeader hide">
-      <button id="highscores1">View Highscores</button>
-      <button id="highscores2">Exit Quiz</button>
-      <button id="restart-quiz1">Restart Quiz</button>
+      <button id="highscores-quiz">View Highscores</button>
+      <button id="exit-quiz">Exit Quiz</button>
       <ul>
         <li>Quiz Score: </li>
         <li id="current-score">0</li>
@@ -30,7 +29,8 @@
     </div>
 
     <div id="highscore-page-header" class="highscorePageHeader hide">
-      <button id="restart-quiz2">Restart Quiz</button>
+      <h2>Highscores</h2>
+      <button id="restart-quiz">Restart Quiz</button>
     </div>
 
   </header>
@@ -39,16 +39,10 @@
     <button id="start-quiz" class="startQuiz">
       Start Quiz
     </button>
-    <button id="highscores3" class="highscores">
+    <button id="highscores-home" class="highscoresHome">
       View High Scores
     </button>
   </div>
-
-  <form id="user-name-intake" class="userNameIntake hide">
-    <label for="username">Username:</label>
-    <input type="text" id="stored-user-names" name="username"><br><br>
-    <input type="submit" value="Submit">
-  </form>
 
   <card id="question-card" class="qCard hide">
     <h2 id="listed-question" class="listedQuestion"></h2>
@@ -63,13 +57,57 @@
     </div>
   </card>
 
-  <card id="highscore-page-card" class="highscorePageCard hide">
-    <h2>Highscores!</h2>
-    <div id="stored-user-names" class="storedUserNames">
-      <p>stored user names</p>
+    <form method="post" id="user-name-intake" class="userNameIntake hide">
+      <div class="userNameBox">
+        <label for="username">Username:</label>
+        <input type="text" id="inputted-user-name" name="username"><br><br>
+      </div>
+      <input id="submit-btn" class="submitBtn" type="submit" value="Submit">
+    </form>
+    
+    <div id="highscore-page-card" class="highscorePageCard hide">
+      <div id="stored-user-names" class="storedUserNames">
+        <table id="highscore-table" class="sortable">
+            <tr>
+              <th class="td1">Username</th>
+              <th class="td2">Score</th>
+            </tr>
+            <tr id="user-pair" class="hide">
+              <td class="td1">username#1</td>
+              <td class="td2">score#1</td>
+            </tr>
+        </table>
+      </div>
     </div>
-  </card>
 
+
+<!-- 
+  function sortTable() {
+    var table, rows, switching, i, x, y, shouldSwitch;
+    table = document.getElementById("myTable");
+    switching = true;
+    /*Make a loop that will continue until
+    no switching has been done:*/
+    while (switching) {
+      //start by saying: no switching is done:
+      switching = false;
+      rows = table.rows;
+      /*Loop through all table rows (except the
+      first, which contains table headers):*/
+      for (i = 1; i < (rows.length - 1); i++) {
+        //start by saying there should be no switching:
+        shouldSwitch = false;
+        /*Get the two elements you want to compare,
+        one from current row and one from the next:*/
+        x = rows[i].getElementsByTagName("TD")[0];
+        y = rows[i + 1].getElementsByTagName("TD")[0];
+        //check if the two rows should switch place:
+        if (Number(x.innerHTML) > Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } -->
 
   <!-- Link to the jQuery library -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
