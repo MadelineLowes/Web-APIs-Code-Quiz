@@ -14,7 +14,7 @@ Application link: https://madelinelowes.github.io/web-api-code-quiz/
 The user can type their daily tasks and/or reminders into the corresponding hour's textbox. Without refreshing the page, the user can write their schedule and move things around to see what their day will look like. In order for the inputted data to be saved, the corresponding hour's save button must be clicked. This information is stored locally on the user's browser to ensure that if the user exits or refreshes the page, the information won't disappear. If the user changes their mind and wants to change a task/reminder, they can delete what has been written and click the save button again.
 
 Application functionality can be seen in the screen recording below:
-ADD SCREEN RECORDING
+https://drive.google.com/file/d/1jOdApwZbfCMfHTNWMZU-zVnVrmnQrh4b/view
 
 ## Credits
 https://bobbyhadz.com/blog/javascript-hide-button-after-click
