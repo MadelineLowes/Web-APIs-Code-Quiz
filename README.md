@@ -22,10 +22,12 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/classList - MDN Web Doc
 https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns - MDN Web Docs grid-template-columns
 https://www.educba.com/multi-dimensional-array-in-javascript/?source=leftnav
+https://www.idtech.com/blog/coding-terminology-list
 https://jquery.com/
 https://stackoverflow.com/questions/27731812/simple-if-else-onclick-then-do
 https://www.w3schools.com/cssref/css_colors.php
-https://www.w3docs.com/snippets/javascript/how-to-create-a-two-dimensional-array-in-javascript.html'
+https://www.w3schools.com/jquery/jquery_intro.asp#:~:text=jQuery%20is%20a%20lightweight%2C%20%22write,a%20single%20line%20of%20code
+https://www.w3docs.com/snippets/javascript/how-to-create-a-two-dimensional-array-in-javascript.html
 https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
 
 ## License
